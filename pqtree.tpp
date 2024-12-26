@@ -24,6 +24,6 @@ PQTree<T>::PQTree(const vector<T>& universe) {
 
 template <typename T>
 PQTree<T>::~PQTree() {
-    
+    delete this->root;
 }
 

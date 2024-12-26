@@ -8,7 +8,7 @@ enum PQNode_types  {leaf, pnode, qnode};
 
 template <typename T> class PQNode
 {
-public:
+  public:
     PQNode_types type;
     T value; // if this is a leaf node
     PQNode<T>* parent;

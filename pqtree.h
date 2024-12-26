@@ -19,12 +19,11 @@ class PQTree {
 
   public:
 // constructors
-    template <typename T> PQTree(const vector<T>& universe);
+    PQTree(const vector<T>& universe);
 
 // methods
     void reduce(constraint& constraints);
 };
-
 
 #include "pqtree.tpp"
 #endif

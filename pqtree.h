@@ -12,15 +12,14 @@ template <typename T> class PQTree {
         const vector<T> elements;
         int size;
     };
-    const vector<T*> leaves;
+    vector<T*> leaves;
+    int leafCount;
+
+    PQNode root;
 
   public:
 // constructors
-    PQTree(const vector<T>& universe) {
-        for (const auto& element : universe) {
-            leaves.push_back(&element);
-        }
-    }
+    PQTree(const vector<T>& universe);
 
 // methods
     void reduce(constraint& constraints);

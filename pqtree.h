@@ -21,7 +21,6 @@ class PQTree {
   public:
 // constructors
     PQTree(const vector<T>& universe);
-    PQTree();
 
 // methods
     void reduce(constraint& constraints);

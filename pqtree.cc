@@ -1,5 +1,10 @@
 #include <vector>
 
-int main() {
-    
-}
+class pq {
+    struct pnode {
+
+    };
+    struct qnode{
+
+    };
+};

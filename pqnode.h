@@ -19,6 +19,14 @@ class PQNode
 // constructors
     PQNode(PQNode_types type);
     PQNode(const T &_value);
+
+  private:
+    inline PQNode* getRoot() const {
+        return (this->parent == nullptr ? 
+            this->parent : 
+            getRoot(this->parent));
+    }
+    
 };
 
 #include "pqnode.tpp"

@@ -13,7 +13,9 @@ class PQTree {
     vector<PQNode<T>*> leaves;
     PQNode<T>* root;
 // constructors
+    // by default, the starting node in a PQ tree is a pnode
     PQTree(const vector<T>& universe);
+    ~PQTree();
 
 // methods
     void reduce(const vector<T> &elements);

@@ -25,6 +25,10 @@ PQTree<T>::PQTree(const vector<T>& universe) {
 
 template <typename T>
 void PQTree<T>::reduce(const vector<T> &elements){
+}
+
+template <typename T>
+PQTree<T>::~PQTree() {
     // TODO
 }
 

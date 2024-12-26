@@ -9,6 +9,13 @@ PQNode<T>::PQNode(PQNode_types _type){
     type = _type;
 }
 
+template<typename T>
+PQNode<T>::~PQNode() {
+    for (const auto& child : this->children) {
+        delete child;
+    }
+}
+
 template <typename T>
 PQNode<T>::PQNode(const T &_value){
     type = leaf;
@@ -28,11 +35,4 @@ ostream& operator<<(std::ostream& out, const PQNode<T>& node){
         out << "Q node";
     }
     return out;
-}
-
-template<typename T>
-PQNode<T>::~PQNode() {
-    for (const auto& child : this->children) {
-        delete child;
-    }
 }

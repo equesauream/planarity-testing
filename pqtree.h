@@ -19,6 +19,5 @@ class PQTree {
     void reduce(const vector<T> &elements);
 };
 
-
 #include "pqtree.tpp"
 #endif

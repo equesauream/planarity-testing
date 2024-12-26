@@ -19,4 +19,6 @@ public:
     PQNode(PQNode_types type);
 };
 
+#include "pqnode.tpp"
+
 #endif

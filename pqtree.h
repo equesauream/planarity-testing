@@ -7,15 +7,17 @@
 
 using namespace std;
 
-
-class PQTree {
+template <typename T> class PQTree {
     struct constraint {
-        int a, b;
+        const vector<T> elements;
+        int size;
     };
-    vector<PQNode> children;
 
   public:
-    void reduce(vector<constraint> constraints);
+    PQTree(const vector<T> &universe);
+
+    void reduce(constraint& constraints);
 };
+
 
 #endif

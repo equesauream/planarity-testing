@@ -1,13 +1,12 @@
-#include "pqnode.h"
 #include "pqtree.h"
+#include "pqnode.h"
 
 using namespace std;
 
-PQTree::PQTree(const vector<T>& universe) {
+template <typename T> PQTree::PQTree(const vector<T>& universe) {
     for (const auto& element : universe) {
         leaves.push_back(&element);
     }
-    leafCount = leaves.size();
     
 }
 

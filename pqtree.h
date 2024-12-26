@@ -13,13 +13,12 @@ template <typename T> class PQTree {
         int size;
     };
     vector<T*> leaves;
-    int leafCount;
 
     PQNode root;
 
   public:
 // constructors
-    PQTree(const vector<T>& universe);
+    template <typename T> PQTree(const vector<T>& universe);
 
 // methods
     void reduce(constraint& constraints);

@@ -1,7 +1,2 @@
-enum PQNode_types  {leaf, pnode, qnode};
+#include "pqnode.h"
 
-class PQNode {
-public:
-    PQNode_types type;
-    int value;
-};

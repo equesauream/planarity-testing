@@ -9,22 +9,16 @@ using namespace std;
 
 template <typename T>
 class PQTree {
-    struct constraint {
-        const vector<T> elements;
-        int size;
-    };
-    vector<T*> leaves;
-
-    PQNode<T>* root;
-
   public:
+    vector<PQNode<T>*> leaves;
+    PQNode<T>* root = nullptr;
 // constructors
     // by default, the starting node in a PQ tree is a pnode
     PQTree(const vector<T>& universe);
     ~PQTree();
 
 // methods
-    void reduce(constraint& constraints);
+    void reduce(const vector<T> &elements);
 };
 
 #include "pqtree.tpp"

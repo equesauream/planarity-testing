@@ -1,5 +1,6 @@
 #include "pqtree.h"
 #include "pqnode.h"
+#include <iostream>
 
 using namespace std;
 
@@ -23,7 +24,20 @@ PQTree<T>::PQTree(const vector<T>& universe) {
 }
 
 template <typename T>
+void PQTree<T>::reduce(const vector<T> &elements){
+}
+
+template <typename T>
 PQTree<T>::~PQTree() {
     delete this->root;
 }
 
+//for debug printing
+template <typename T>
+ostream& operator<<(std::ostream& out, const PQTree<T>& t){
+    out << "PQTree: ";
+    for (const auto& e: t.leaves){
+        out << *e << ", ";
+    }
+    return out;
+}

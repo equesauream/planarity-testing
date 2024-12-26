@@ -17,6 +17,13 @@ template <typename T> class PQNode
 
 // constructors
     PQNode(PQNode_types type);
+
+  private:
+    inline PQNode* getRoot() const {
+        return (this->parent == nullptr ? 
+            this->parent : 
+            getRoot(this->parent));
+    }
 };
 
 #include "pqnode.tpp"

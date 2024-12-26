@@ -19,7 +19,9 @@ class PQTree {
 
   public:
 // constructors
+    // by default, the starting node in a PQ tree is a pnode
     PQTree(const vector<T>& universe);
+    ~PQTree();
 
 // methods
     void reduce(constraint& constraints);

@@ -20,6 +20,10 @@ PQTree<T>::PQTree(const vector<T>& universe) {
         leaves.push_back(_leaf);
     }
     root = _root;
+}
+
+template <typename T>
+PQTree<T>::~PQTree() {
     
 }
 

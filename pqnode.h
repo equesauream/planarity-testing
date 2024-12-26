@@ -16,9 +16,9 @@ public:
     bool blocked;
 
 // constructors
-    PQNode(PQNode_types type) {
-
-    }
+    PQNode(PQNode_types type);
 };
+
+#include "pqnode.tpp"
 
 #endif

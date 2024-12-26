@@ -7,14 +7,15 @@
 
 using namespace std;
 
-template <typename T> class PQTree {
+template <typename T>
+class PQTree {
     struct constraint {
         const vector<T> elements;
         int size;
     };
     vector<T*> leaves;
 
-    PQNode root;
+    PQNode<T>* root;
 
   public:
 // constructors
@@ -25,4 +26,5 @@ template <typename T> class PQTree {
 };
 
 
+#include "pqtree.tpp"
 #endif

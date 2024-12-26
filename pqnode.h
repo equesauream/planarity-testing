@@ -6,7 +6,8 @@ using namespace std;
 
 enum PQNode_types  {leaf, pnode, qnode};
 
-template <typename T> class PQNode
+template <typename T>
+class PQNode
 {
 public:
     PQNode_types type;
@@ -17,6 +18,7 @@ public:
 
 // constructors
     PQNode(PQNode_types type);
+    PQNode(const T &_value);
 };
 
 #include "pqnode.tpp"

@@ -18,7 +18,11 @@ class PQTree {
     ~PQTree();
 
 // methods
-    void reduce(const vector<T> &elements);
+    bool reduction(const vector<T> &elements);
+
+  private:
+    bool bubble(const vector<PQNode<T>*> &leaves_to_reduce);
+    bool reduce(const vector<PQNode<T>*> &leaves_to_reduce);
 };
 
 #include "pqtree.tpp"
